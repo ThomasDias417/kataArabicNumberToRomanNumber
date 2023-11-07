@@ -21,6 +21,26 @@ test('convert 10 to X',()=>{
     expect(convertArabicNumberToRomanNumber(10)).toEqual('X')
 })
 
-// test('cumul opérande',()=>{
-//     expect(convertArabicNumberToRomanNumber(12).toEqual('XII'))
-// })
+test('convert 11 to XI',()=>{
+    expect(convertArabicNumberToRomanNumber(11)).toEqual('XI')
+})
+
+test('convert 15 to XV',()=>{
+    expect(convertArabicNumberToRomanNumber(15)).toEqual('XV')
+})
+
+test('convert 19 to XIX',()=>{
+    expect(convertArabicNumberToRomanNumber(19)).toEqual('XIX')
+})
+
+test('convert 44 to XLIV',()=>{
+    expect(convertArabicNumberToRomanNumber(44)).toEqual('XLIV')
+})
+
+test('convert 878 to DCCCLXXVIII',()=>{
+    expect(convertArabicNumberToRomanNumber(878)).toEqual('DCCCLXXVIII')
+})
+
+test('convert 3729 to MMMDCCXXIX',()=>{
+    expect(convertArabicNumberToRomanNumber(3729)).toEqual('MMMDCCXXIX')
+})
