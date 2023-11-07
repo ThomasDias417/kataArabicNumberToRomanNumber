@@ -1,0 +1,19 @@
+{
+  "name": "kata-roman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "kataArabicToRomanNumber.js",
+  "scripts": {
+    "test": "jest --coverage --watchAll",
+    "start": "nodemon ./kataArabicToRomanNumber.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon" : "^3.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1"
+  }
+}
