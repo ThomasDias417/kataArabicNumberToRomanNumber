@@ -1,8 +1,22 @@
  function convertArabicNumberToRomanNumber(number){
-    const equivalence = ['I','II','III','IV','V','VI','VII','VIII','IX','X']
+    let numStr = String(number)
+
+    if(numStr.length == 0){
+        return ''
+    }
+
+    if(numStr === '0'){
+        return ''
+    }
+
+    const rank5 = ['V','L','D']
+    const rank10 = ['X','C','M']
+    const equivalence = ['I','II','III','IV',rank5[0],'VI','VII','VIII','IX',rank10[0]]
+
+    if(numStr.length == 1){
+        return equivalence[number-1]
+    }
     
-    const rank = ['','L','C','D','M']
-    return equivalence[number-1]
 }
 
 module.exports = {
