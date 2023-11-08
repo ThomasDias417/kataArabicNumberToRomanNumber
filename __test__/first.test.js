@@ -1,5 +1,6 @@
 
 const {convertArabicNumberToRomanNumber} = require('../kataArabicToRomanNumber.js')
+const {convertRomanNumberToArabicNumber} = require('../kataRomainToArabic.js')
 
 test('convert 1 to I',()=>{
     expect(convertArabicNumberToRomanNumber(1)).toEqual('I')
@@ -43,4 +44,20 @@ test('convert 878 to DCCCLXXVIII',()=>{
 
 test('convert 3729 to MMMDCCXXIX',()=>{
     expect(convertArabicNumberToRomanNumber(3729)).toEqual('MMMDCCXXIX')
+})
+
+test('convert I to 1',()=>{
+    expect(convertRomanNumberToArabicNumber('I')).toEqual(1)
+})
+
+test('convert V to 5',()=>{
+    expect(convertRomanNumberToArabicNumber('V')).toEqual(5)
+})
+
+test('convert CCCXXI to 321',()=>{
+    expect(convertRomanNumberToArabicNumber('CCCXXI')).toEqual(321)
+})
+
+test('convert MMMCCXIII to 3213',()=>{
+    expect(convertRomanNumberToArabicNumber('MMMCCXIII')).toEqual(3213)
 })
