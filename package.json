@@ -5,13 +5,16 @@
   "main": "kataArabicToRomanNumber.js",
   "scripts": {
     "test": "jest --watchAll",
-    "start": "nodemon ./kataArabicToRomanNumber.js"
+    "start": "nodemon ./api/server/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "jest": "^29.7.0"
