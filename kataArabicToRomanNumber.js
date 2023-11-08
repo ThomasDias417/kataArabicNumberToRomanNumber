@@ -4,42 +4,51 @@
  * @returns {String} 
  */
 function convertArabicNumberToRomanNumber(number){
-    let numberString = String(number);
-    
-    const decimalsTable = ['I', 'X','C','M'];
-    const fivesTable= ['V','L','D'];
-    
-    let result = "";
+    table = ["I","V","X","L","C","D","M"];
 
-    // index to loop number string from start to end
-    let indexNumberString = 0;
-
-    for (let i = numberString.length - 1; i >= 0; i--) {
-        const zeroToNineTable = {
-            "0": "",
-            "1": decimalsTable[i],
-            "2": decimalsTable[i] + decimalsTable[i],
-            "3": decimalsTable[i] + decimalsTable[i] + decimalsTable[i],
-            "4": decimalsTable[i] + fivesTable[i],
-            "5": fivesTable[i],
-            "6": fivesTable[i] + decimalsTable[i],
-            "7": fivesTable[i] + decimalsTable[i] + decimalsTable[i],
-            "8": fivesTable[i] + decimalsTable[i] + decimalsTable[i] + decimalsTable[i],
-            "9": decimalsTable[i] + decimalsTable[i+1]
-        }
-
-        let numeral = numberString[indexNumberString];
-
-        let romanNumeral = zeroToNineTable[numeral];
-
-        result = result + romanNumeral;
-        indexNumberString++;
+    const num = String(number);
+    let roman = "";
+    let j = 0;
+    for (let i = num.length-1; i >= 0; i--) {
+        let romanChar = "";
+        const char = num.charAt(i);
+        switch (char) {
+            case "0":
+                romanChar = "";
+                break;
+            case "1":
+                romanChar = table[j];
+                break;
+            case "2":
+                romanChar = table[j] + table[j];
+                break;
+            case "3":
+                romanChar = table[j] + table[j] + table[j];
+                break;
+            case "4":
+                romanChar = table[j] + table[j+1];
+                break;
+            case "5":
+                romanChar = table[j+1];
+                break;
+            case "6":
+                romanChar = table[j+1] + table[j];
+                break;
+            case "7":
+                romanChar = table[j+1] + table[j] + table[j];
+                break;
+            case "8":
+                romanChar = table[j+1] + table[j] + table[j] + table[j];
+                break;
+            case "9":
+                romanChar = table[j] + table[j+2];
+                break;
+            }
+        roman = romanChar + roman;
+        j+= 2;
     }
-
-    return result
+    return roman;
 }
-
-convertArabicNumberToRomanNumber(10)
 
 module.exports = {
     convertArabicNumberToRomanNumber
