@@ -89,11 +89,7 @@ function convertRomanNumberToArabicNumber(valeur){
             nombres.push(m);
             break;
         default:
-            /*
-            Si un chiffre non romain est écrit, on push dans le tableau au hasard un nombre erreur
-            (01019) pour sortir une erreur.
-            */
-            
+           
             break;
         }
     }
@@ -121,3 +117,4 @@ function handleSubmitRomainToArabe(event) {
 document.getElementById("monFormulaireAtoR").addEventListener("submit", handleSubmitArabeToRomain);
 
 document.getElementById("monFormulaireRtoA").addEventListener("submit", handleSubmitRomainToArabe);
+
