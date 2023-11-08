@@ -1,7 +1,7 @@
 const {computeConversion,computeBundleConvertion} = require('../models/converterAtoR')
 const {viewResultCovertion,viewComputeBundle} = require('../view/converterAtoR')
 
-const getConversion = (req,res)=>{
+const getConversionAtoR = (req,res)=>{
     try {
         res.status(201).send(viewResultCovertion(computeConversion(req.body.arabicToRoman)))
     }catch(e){
@@ -19,6 +19,6 @@ const getTestBundle = (req,res)=>{
 
 
 module.exports = {
-    getConversion,
+    getConversionAtoR,
     getTestBundle,
 }
