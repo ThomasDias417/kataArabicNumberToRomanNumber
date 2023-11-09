@@ -1,6 +1,6 @@
 function convertRomanNumberToArabicNumber(valeur){
-    var i, v, x, l, c, d, m;
-    var nombres = [];
+    let i, v, x, l, c, d, m;
+    const nombres = [];
     let resultat = 0;
 
      for (var j = 0; j < valeur.length; j++) {
@@ -47,7 +47,6 @@ function convertRomanNumberToArabicNumber(valeur){
     }
   
   nombres.forEach((elem)=>{resultat += elem})
-  console.log(resultat)
   return resultat
 }
 
