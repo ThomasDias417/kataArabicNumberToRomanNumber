@@ -3,6 +3,10 @@ const app = express()
 const {convertAtoRroutes} = require('../routes/converterAtoR')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
+const cors = require('cors');
+
+
+app.use(cors());
 
 app.use(express.json())
 
