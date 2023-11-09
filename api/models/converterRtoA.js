@@ -1,10 +1,10 @@
 const {convertRomanNumberToArabicNumber} = require('../../kataRomainToArabic')
 
-const computeConversion = (data)=>{
+const computeConvertion = (data)=>{
     const res = convertRomanNumberToArabicNumber(data)
     return res
 }
 
 module.exports = {
-    computeConversion
+    computeConvertion
 }

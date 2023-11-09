@@ -1,4 +1,4 @@
-const viewResultCoversion = (data)=>{
+const viewResultConvertion = (data)=>{
     return {res : data}
 }
 
@@ -8,6 +8,6 @@ const viewComputeBundle = (data)=>{
 
 
 module.exports = {
-    viewResultCoversion,
+    viewResultConvertion,
     viewComputeBundle
 }

@@ -1,14 +1,14 @@
 const express = require('express')
 const convertAtoRroutes = express.Router()
-const {getConversionAtoR,getTestBundle} = require('../controler/convertAtoR')
-const {getConversionRtoA} = require('../controler/convertRtoA')
+const {getConvertionAtoR,getTestBundle} = require('../controler/convertAtoR')
+const {getConvertionRtoA} = require('../controler/convertRtoA')
 
 convertAtoRroutes.get('/',async(req,res,next)=>{
-    getConversionAtoR(req,res)
+    getConvertionAtoR(req,res)
 })
 
 convertAtoRroutes.get('/reverse',async(req,res,next)=>{
-    getConversionRtoA(req,res)
+    getConvertionRtoA(req,res)
 })
 
 

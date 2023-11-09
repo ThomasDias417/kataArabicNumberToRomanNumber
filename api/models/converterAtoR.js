@@ -1,6 +1,6 @@
 const {convertArabicNumberToRomanNumber} = require('../../kataArabicToRomanNumber')
 
-const computeConversion = (data)=>{
+const computeConvertion = (data)=>{
     const res = convertArabicNumberToRomanNumber(data)
     return res
 }
@@ -21,6 +21,6 @@ const computeBundleConvertion = ()=>{
 }
 
 module.exports = {
-    computeConversion,
+    computeConvertion,
     computeBundleConvertion
 }

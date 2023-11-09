@@ -1,9 +1,9 @@
-const {computeConversion,computeBundleConvertion} = require('../models/converterAtoR')
-const {viewResultCovertion,viewComputeBundle} = require('../view/converterAtoR')
+const {computeConvertion,computeBundleConvertion} = require('../models/converterAtoR')
+const {viewResultConvertion,viewComputeBundle} = require('../view/converterAtoR')
 
-const getConversionAtoR = (req,res)=>{
+const getConvertionAtoR = (req,res)=>{
     try {
-        res.status(201).send(viewResultCovertion(computeConversion(req.body.number)))
+        res.status(201).send(viewResultConvertion(computeConvertion(req.body.nombre)))
     }catch(e){
         res.status(404).send({res : e.message})
     }
@@ -19,6 +19,6 @@ const getTestBundle = (req,res)=>{
 
 
 module.exports = {
-    getConversionAtoR,
+    getConvertionAtoR,
     getTestBundle,
 }

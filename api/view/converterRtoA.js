@@ -1,7 +1,7 @@
-const viewResultCovertion = (data)=>{
+const viewResultConvertion = (data)=>{
     return {res : data}
 }
 
 module.exports = {
-    viewResultCovertion,
+    viewResultConvertion,
 }

@@ -1,9 +1,9 @@
-const {computeConversion} = require('../models/converterRtoA')
-const {viewResultCovertion} = require('../view/converterRtoA')
+const {computeConvertion} = require('../models/converterRtoA')
+const {viewResultConvertion} = require('../view/converterRtoA')
 
-const getConversionRtoA = (req,res)=>{
+const getConvertionRtoA = (req,res)=>{
     try {
-        res.status(201).send(viewResultCovertion(computeConversion(req.body.number)))
+        res.status(201).send(viewResultConvertion(computeConvertion(req.body.nombre)))
     }catch(e){
         res.status(404).send({res : e.message})
     }
@@ -11,5 +11,5 @@ const getConversionRtoA = (req,res)=>{
 
 
 module.exports = {
-    getConversionRtoA,
+    getConvertionRtoA,
 }
