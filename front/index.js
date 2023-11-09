@@ -13,7 +13,7 @@ function convertArabicNumberToRomanNumber(number){
         const char = num.charAt(i);
         switch (char) {
             case "0":
-                romanChar = "";
+                romanChar = "O";
                 break;
             case "1":
                 romanChar = table[j];
