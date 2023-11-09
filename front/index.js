@@ -1,6 +1,6 @@
-const registerNumber = {
+const URL = "https://lumpy-conscious-fight.glitch.me" //placé votre nom de domaine
 
-}
+const registerNumber = {}
 
 function convertArabicNumberToRomanNumber(number){
     let table = ["I","V","X","L","C","D","M"];
@@ -134,7 +134,7 @@ function handleSubmitArabeToRomainRest(event){
         return 
     }
 
-    fetch("https://lumpy-conscious-fight.glitch.me/converterArabicToRoman",{
+    fetch(URL+"/converterArabicToRoman",{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
