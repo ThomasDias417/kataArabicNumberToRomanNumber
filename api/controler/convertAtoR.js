@@ -5,7 +5,7 @@ const getConversionAtoR = (req,res)=>{
     try {
         res.status(201).send(viewResultCovertion(computeConversion(req.body.number)))
     }catch(e){
-        res.status(404).send(viewGetAllProductJson(e.message))
+        res.status(404).send({res : e.message})
     }
 }
 
