@@ -1,3 +1,7 @@
+const registerNumber = {
+
+}
+
 function convertArabicNumberToRomanNumber(number){
     let table = ["I","V","X","L","C","D","M"];
 
@@ -114,21 +118,34 @@ function handleSubmitRomainToArabe(event) {
     document.getElementById('resultRtoA').innerHTML = result 
 }
 
+function isThisNumberAlreadyPick(num){
+    if(registerNumber[num]){
+        return true
+    }
+    return false
+}
+
 function handleSubmitArabeToRomainRest(event){
     event.preventDefault()
-    let nombre = document.getElementById("nombre4").value;
-    let url = "http://162.19.65.178:3000/converterArabicToRoman"
-    const options = {
-        method: 'GET',
+    let nombre = document.getElementById("nombre3").value;
+
+    if(isThisNumberAlreadyPick(nombre)){
+        document.getElementById('resultAtoR_REST').innerHTML = "history : " + registerNumber[nombre]
+        return 
+    }
+
+    fetch("https://lumpy-conscious-fight.glitch.me/converterArabicToRoman",{
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(nombre)
-      };
-
-    fetch(url,options)
+        body: JSON.stringify({nombre:nombre})
+      })
       .then(res => res.json())
-      .then(data => document.getElementById('resultRtoA_REST').innerHTML = data.res)
+      .then(data => {
+        document.getElementById('resultAtoR_REST').innerHTML = data.res
+        registerNumber[nombre] = data.res
+    })
 }
 
 document.getElementById("monFormulaireAtoR").addEventListener("submit", handleSubmitArabeToRomain);
