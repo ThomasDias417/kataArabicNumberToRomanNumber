@@ -114,7 +114,26 @@ function handleSubmitRomainToArabe(event) {
     document.getElementById('resultRtoA').innerHTML = result 
 }
 
+function handleSubmitArabeToRomainRest(event){
+    event.preventDefault()
+    let nombre = document.getElementById("nombre4").value;
+    let url = "http://162.19.65.178:3000/converterArabicToRoman"
+    const options = {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(nombre)
+      };
+
+    fetch(url,options)
+      .then(res => res.json())
+      .then(data => document.getElementById('resultRtoA_REST').innerHTML = data.res)
+}
+
 document.getElementById("monFormulaireAtoR").addEventListener("submit", handleSubmitArabeToRomain);
 
 document.getElementById("monFormulaireRtoA").addEventListener("submit", handleSubmitRomainToArabe);
+
+document.getElementById("monFormulaireAtoR_REST").addEventListener("submit", handleSubmitArabeToRomainRest);
 
