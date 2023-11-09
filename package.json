@@ -4,7 +4,8 @@
   "description": "",
   "main": "kataArabicToRomanNumber.js",
   "scripts": {
-    "test": "jest --watchAll",
+    "dev-test": "jest --watchAll",
+    "test": "jest",
     "start": "nodemon ./api/server/server.js"
   },
   "keywords": [],
