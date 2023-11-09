@@ -3,7 +3,7 @@ const {viewResultCovertion,viewComputeBundle} = require('../view/converterAtoR')
 
 const getConversionAtoR = (req,res)=>{
     try {
-        res.status(201).send(viewResultCovertion(computeConversion(req.body.arabicToRoman)))
+        res.status(201).send(viewResultCovertion(computeConversion(req.body.number)))
     }catch(e){
         res.status(404).send(viewGetAllProductJson(e.message))
     }
